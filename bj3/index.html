@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <P>click the button to evalute/execute js</P>
+    <button onclick="myfunction()">try it</button>
+    <p id="result"></p>
+    <script>
+        function myfunction() {
+            var x = 30;
+            var y =22;
+            var a = eval("x+y") + "<br>";
+            var b = eval("2*2")  + "<br>";
+            var c = eval("y-x")  + "<br>";
+var c= eval("y-x")
+var res= a+b+c;
+//concatentas the string
+document.getElementById("result").innerHTML= res;
+        }
+        
+    </script>
+    <p>hi</p>
+    <h2>js array sort</h2>
+    <p>click the button to sort array in ascending order</p>
+    <button onclick="ascending()">Ascending order</button>
+    <button onclick="descending()">descending order</button>
+    <p id="result"></p>
+    <script>
+        var points = [30,22,52,4,-8,10];
+        document.getElementById("result").innerHTML= points;
+        function ascending(){
+            points.sort((a,b)=>{return a-b});
+            document.getElementById("result").innerHTML= points;
+        }
+        function descending(){
+            points.sort(function(a,b){return b-a });
+            document.getElementById("result").innerHTML=points;
+        }
+    </script>
+</body>
+</html>
